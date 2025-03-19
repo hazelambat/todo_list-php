@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #CDED83; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main container */
+.container {
+    display: flex;
+    width: 100%;
+    height: 95vh;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #084734; 
+    padding: 20px;
+    color: #CEF17B; 
+}
+
+
+.sidebar h2 {
+    text-align: center;
+    font-size: 28px; 
+    font-weight: 700;
+}
+
+.sidebar a {
+    display: block;
+    text-decoration: none;
+    color: #CEF17B;
+    text-align: center;
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #0A5A3C;
+    border-radius: 5px;
+}
+
+/* Main Content */
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: #CDED83; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow-y: auto;
+    height: 100%;
+}
+
+
+.content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background: #0A5A3C;
+    border-radius: 10px;
+}
+
+.content::-webkit-scrollbar-track {
+    background: #CDED83;
+}
+
+/* Task Form */
+.task-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    width: 100%; 
+    gap: 20px; 
+}
+
+
+.task-form {
+    display: flex;
+    flex-direction: column; 
+    width: 95%;
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.task-form h3 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+}
+
+
+.task-input-container {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+
+
+.task-form input[type="text"] {
+    flex: 1;
+    padding: 12px; 
+    border: 2px solid #a8d695;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    width: 87%; 
+    transition: 0.3s;
+}
+
+/* Glow Effect & Color Change */
+.task-form input[type="text"]:focus {
+    border-color: #0A5A3C; 
+    box-shadow: 0 0 8px rgba(5, 40, 20, 0.7); 
+}
+
+
+.task-form input[type="text"]:not(:placeholder-shown) {
+    background-color: #E6F9D5; 
+}
+
+
+.task-form button {
+    padding: 12px 18px;
+    background-color: #0A5A3C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.task-form button:hover {
+    background-color: #084734;
+}
+
+/* Task List */
+.task-wrapper {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.task-section {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 15px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    border: 1px solid #a8d695;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    box-sizing: border-box;
+}
+
+.task-item span {
+    flex: 1;
+    text-align: left;
+}
+
+
+
+/* Task Buttons */
+.task-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* Button Styles */
+.btn {
+    padding: 8px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-complete {
+    background-color: #0A5A3C;
+    color: white;
+}
+
+.btn-complete:hover {
+    background-color: #084734;
+}
+
+.btn-delete {
+    background-color: red;
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: darkred;
+}
+
+/* Completed Task */
+.completed {
+    background-color: white !important;
+    color: black !important;
+    text-decoration: line-through;
+    border-left: 5px solid #1B7F4B;
+    width: 100%; 
+}
